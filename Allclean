@@ -1,0 +1,15 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+makeType=${1:-libso}
+#targetType=libso
+#. $WM_PROJECT_DIR/wmake/scripts/AllwmakeParseArguments
+
+set -x
+
+./src/Allclean
+
+wclean ./applications/utilities/preProcessing/canteraToFPVCentralFoam
+wclean ./applications/utilities/postProcessing/FPVCentralFoamPost
+wclean ./applications/solver/FPVCentralFoam
+
+# ----------------------------------------------------------------- end-of-file

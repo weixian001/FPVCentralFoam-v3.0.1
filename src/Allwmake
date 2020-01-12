@@ -1,0 +1,17 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+makeType=${1:-libso}
+set -x
+wmake $makeType ./thermophysicalModels/specie
+wmake $makeType ./thermophysicalModels/basic
+wmake $makeType ./thermophysicalModels/reactionThermo
+wmake $makeType ./thermophysicalModels/chemistryModel
+
+wmake $makeType ./TurbulenceModels/turbulenceModels
+wmake $makeType ./TurbulenceModels/compressible
+
+wmake $makeType ./combustionModels
+
+wmake $makeType ./BCs
+
+# ----------------------------------------------------------------- end-of-file

@@ -1,0 +1,10 @@
+SOURCE = \
+combustionModel/combustionModel.C \
+psiCombustionModel/psiCombustionModel/psiCombustionModel.C \
+psiCombustionModel/psiCombustionModel/psiCombustionModelNew.C \
+psiCombustionModel/psiThermoCombustion/psiThermoCombustion.C \
+psiCombustionModel/psiChemistryCombustion/psiChemistryCombustion.C \
+flameletTable/linearInterpolation/linearInterpolation.C \
+flameletTable/flameletTable/flameletTable.C \
+flameletTable/tableSolver/tableSolver.C \
+PsiSLFModel/PsiSLFModels.C 
